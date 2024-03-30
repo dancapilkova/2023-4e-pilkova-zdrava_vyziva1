@@ -3,28 +3,26 @@ from djrichtextfield.widgets import RichTextWidget
 from .models import Recipe
 
 
-class RecipeForm(forms.ModelForm):
-    class AddRecipe:
+class NewRecipeForm(forms.ModelForm):
+    class Meta:
         model = Recipe
         fields = [
             "title",
             "ingredients",
             "instructions",
             "image",
-            "day_time",
-            "cuisine",
+            "meal_type",
+            "cuisine_types",
             "calories",
         ]
-
         ingredients = forms.CharField(widget=RichTextWidget())
         instructions = forms.CharField(widget=RichTextWidget())
-
         labels = {
             "title": "Recipe Title",
             "ingredients": "Recipe Ingredients",
             "instructions": "Recipe Instructions",
             "image": "Recipe Image",
-            "day_time": "Day Time",
-            "cuisine": "Cuisine",
+            "meal_type": "Meal Type",
+            "cuisine_types": "Cuisine Type",
             "calories": "Calories",
         }
