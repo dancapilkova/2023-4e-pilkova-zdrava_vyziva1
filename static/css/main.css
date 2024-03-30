@@ -9,7 +9,7 @@
   --primary: #218838; /* Green */
   --secondary: #0069d9; /* Blue */
   --text-dark: #212529;
-  --text-light: #6c757d;
+  --text-light: #ffffff;
   --white: #fff;
 
   --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -30,7 +30,6 @@ main {
   padding: 20px;
 }
 
-/* Header */
 .navbar {
   background-color: var(--white);
   box-shadow: var(--box-shadow);
@@ -73,4 +72,8 @@ main {
   .navbar-collapse {
     background-color: var(--white);
   }
+}
+
+.logo {
+  width: 50px;
 }

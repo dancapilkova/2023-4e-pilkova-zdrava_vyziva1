@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("homepage.urls")),
     path("accounts/", include("allauth.urls")),
+    path("djrichtextfield", include("djrichtextfield.urls")),
 ]

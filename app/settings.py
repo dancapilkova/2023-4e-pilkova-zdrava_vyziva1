@@ -43,9 +43,27 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'homepage',
+    'recipes',
     "crispy_forms",
     "crispy_bootstrap5",
+    "cloudinary",
+    "cloudinary_storage",
+    "djrichtextfield",
 ]
+
+DJRICHTEXTFIELD_CONFIG = {
+    "js": ["//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"],
+    "init_template": "djrichtextfield/init/ckeditor.js",
+    "settings": {
+        "toolbar": [
+            ["Format", "Bold", "Italic", "Underline"],
+            ["NumberedList", "BulletedList"],
+            ["Undo", "Redo"],
+            ["Maximise"],
+        ],
+        "format_tags": "p;h1;h2;h3",
+    },
+}
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
@@ -149,6 +167,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
