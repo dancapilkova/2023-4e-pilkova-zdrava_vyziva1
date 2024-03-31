@@ -217,5 +217,81 @@ a.img-container:hover {
   .profile-recipes a {
     text-decoration: none;
   }
-
+  .hero-section {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  /* Featured Recipes Section */
+  .featured-recipes-section {
+    padding: 50px 0;
+  }
+  
+  .featured-recipes-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .featured-recipes-section .card {
+    margin-bottom: 30px;
+  }
+  
+  /* Health Tips Section */
+  .health-tips-section {
+    padding: 50px 0;
+  }
+  
+  .health-tips-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .health-tip {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .testimonials-section {
+    padding: 50px 0;
+  }
+  
+  .testimonials-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .testimonial {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial p {
+    font-style: italic;
+  }
+  
+  .testimonial .author {
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 767px) {
+    .hero-section {
+      padding: 80px 0;
+    }
+  
+    .featured-recipes-section .card {
+      margin-bottom: 20px;
+    }
+  
+    .health-tip,
+    .testimonial {
+      padding: 15px;
+    }
+ }
 }
