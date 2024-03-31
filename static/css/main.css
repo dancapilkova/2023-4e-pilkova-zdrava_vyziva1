@@ -152,6 +152,60 @@ a.img-container:hover {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+.accordion-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-button {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.meals {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 > a {
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.thumb img {
+  width: 100%;
+}
+.profile-img {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.profile-img img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info {
+  width: 100%;
+  text-align: center;
+}
+
+.profile-recipes {
+  width: 100%
+}
+
 @media screen and (min-width:40em) {
   .form {
     width: 50%;
@@ -277,7 +331,6 @@ a.img-container:hover {
     text-align: right;
   }
   
-  /* Responsive Styles */
   @media (max-width: 767px) {
     .hero-section {
       padding: 80px 0;
@@ -293,27 +346,4 @@ a.img-container:hover {
     }
  }
 }
-.profile-img {
-  width: 280px;
-  margin: 0 auto;
-}
 
-.profile-img img {
-  border-radius: 8px;
-  width: 100%;
-}
-
-.profile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.info {
-  width: 100%;
-  text-align: center;
-}
-
-.profile-recipes {
-  width: 100%
-}

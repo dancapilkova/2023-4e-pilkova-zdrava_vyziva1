@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'recipes',
     'socials',
     'materials',
+    'day_plan',
     "crispy_forms",
     "crispy_bootstrap5",
     "cloudinary",
