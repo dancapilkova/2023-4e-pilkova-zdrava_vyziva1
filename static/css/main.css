@@ -223,7 +223,6 @@ a.img-container:hover {
     text-align: center;
   }
   
-  /* Featured Recipes Section */
   .featured-recipes-section {
     padding: 50px 0;
   }
@@ -237,7 +236,6 @@ a.img-container:hover {
     margin-bottom: 30px;
   }
   
-  /* Health Tips Section */
   .health-tips-section {
     padding: 50px 0;
   }
@@ -294,4 +292,28 @@ a.img-container:hover {
       padding: 15px;
     }
  }
+}
+.profile-img {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.profile-img img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info {
+  width: 100%;
+  text-align: center;
+}
+
+.profile-recipes {
+  width: 100%
 }
