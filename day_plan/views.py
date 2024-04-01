@@ -30,3 +30,71 @@ class DayPlan(LoginRequiredMixin, TemplateView):
         context = {"days": days, "meals": meals}
 
         return context
+
+class GetMeal(TemplateView):
+    template_name = "day_plan/create_recipe.html"
+
+    def get_context_data(self, **kwargs):
+        calories = self.request.GET.get("calories")
+        query = self.request.GET.get("search")
+
+        if query:
+            if not calories:
+                calories = 1000
+
+            calories = int(calories)
+
+            recipes = Recipe.objects.filter(
+                  Q(title__icontains=query)
+                | Q(ingredients__icontains=query)
+                | Q(cuisine_types__icontains=query)
+                | Q(instructions__icontains=query)
+                & Q(calories__lte=calories)
+                & Q(meal_type=kwargs["meal_type"])
+            )
+
+        elif calories:
+            recipes = Recipe.objects.filter(
+                calories__lte=calories, meal_type=kwargs["meal_type"]
+            )
+
+        else:
+            if len(Recipe.objects.all()) < 1:
+                recipes = []
+            else:
+                recipes = Recipe.objects.filter(meal_type=kwargs["meal_type"])
+
+        if len(recipes) > 0:
+            recipe = random.choice(recipes)
+            context = {
+                "meal_date": kwargs["meal_date"],
+                "meal_type": kwargs["meal_type"],
+                "recipe": recipe,
+            }
+
+        else:
+            context = {
+                "meal_date": kwargs["meal_date"],
+                "meal_type": kwargs["meal_type"],
+            }
+        return context
+
+
+class NewMeal(View):
+    def post(self, *args, **kwargs):
+        pk = kwargs["pk"]
+        recipe = Recipe.objects.get(pk=pk)
+        meal_date = kwargs["meal_date"]
+        meal_type = kwargs["meal_type"]
+
+        meal, created = Meal.objects.update_or_create(
+            meal_date=meal_date,
+            meal_type=meal_type,
+            defaults={
+                "user": self.request.user,
+                "recipe": recipe,
+                "meal_date": meal_date,
+            },
+        )
+
+        return HttpResponseRedirect(reverse("meal_planner"))
