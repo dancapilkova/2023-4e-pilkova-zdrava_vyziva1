@@ -10,9 +10,12 @@ class Profile(models.Model):
     user = models.ForeignKey(User, related_name="profile", on_delete=models.CASCADE)
     image = ResizedImageField(size=[300, 300], quality=75, upload_to="profiles/", force_format="WEBP", blank=False,)
     bio = RichTextField(max_length=2500, null=True, blank=True)
+    dob = models.DateField(max_length=8, default="2000-01-01")
 
     def __str__(self):
         return str(self.user.username)
+    def formatted_dob(self):
+        return self.dob.strftime("%d %b %Y")
 
 
 @receiver(post_save, sender=User)

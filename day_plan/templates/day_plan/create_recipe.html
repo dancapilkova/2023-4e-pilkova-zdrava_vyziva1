@@ -24,7 +24,7 @@
     {% if recipe %}
 
     <div class="form">
-      <a href="{% url 'recipe_detail' recipe.id %}" class="recipes">
+      <a href="{% url 'detail' recipe.id %}" class="recipes">
         <img src="{{recipe.image.url}}" class="card-img-top">
         <h2 class="text-center">{{recipe.title}}</h2>
 

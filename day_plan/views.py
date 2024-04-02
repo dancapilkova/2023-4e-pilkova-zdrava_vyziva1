@@ -97,4 +97,4 @@ class NewMeal(View):
             },
         )
 
-        return HttpResponseRedirect(reverse("meal_planner"))
+        return HttpResponseRedirect(reverse("day_plan"))

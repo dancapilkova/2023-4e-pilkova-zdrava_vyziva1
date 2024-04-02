@@ -206,6 +206,84 @@ h3 > a {
   width: 100%
 }
 
+.modal {
+  height: 200px;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Tips Section */
+.tips-section {
+  padding: 50px 0;
+}
+
+.tips-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.tip {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  height: 460px; /* Increased height for larger boxes */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tip:hover {
+  transform: translateY(-5px);
+}
+
+.tip img {
+  width: 100%;
+  height: 200px; /* Adjust the height of the images */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.tip img:hover {
+  transform: scale(1.05);
+}
+
+.tip h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50; /* Green color */
+  margin-bottom: 15px;
+}
+
+.tip p {
+  font-size: 16px;
+  color: #666;
+}
+
 @media screen and (min-width:40em) {
   .form {
     width: 50%;

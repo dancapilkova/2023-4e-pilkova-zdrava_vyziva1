@@ -1,0 +1,133 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}
+Exercise Plans
+{% endblock %}
+
+{% block content %}
+<!-- Introduction -->
+<section class="introduction-section">
+  <div class="container">
+    <h2>Welcome to Our Exercise Plans</h2>
+    <p>Whether you're a beginner, intermediate, or expert, we have curated exercise plans tailored to your fitness level. Get ready to challenge yourself, improve your strength, and enhance your overall well-being!</p>
+  </div>
+</section>
+
+<!-- Beginner Exercise Plan Section -->
+<section class="beginner-exercise-plan-section">
+  <div class="container">
+    <h2>Beginner Exercise Plan</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="exercise">
+          <!--<img src="{% static 'images/squats.jpg' %}" alt="Bodyweight Squats">-->
+          <h3>1. Bodyweight Squats</h3>
+          <p>Perform 3 sets of 10 bodyweight squats. Stand with your feet shoulder-width apart, squat down as if sitting back into a chair, then return to standing.</p>
+        </div>
+        <div class="exercise">
+        <!--  <img src="{% static 'images/push-ups.jpg' %}" alt="Push-Ups"> -->
+          <h3>2. Push-Ups</h3>
+          <p>Do 3 sets of 8 push-ups. Start in a plank position with your hands shoulder-width apart, lower your body until your chest nearly touches the ground, then push back up.</p>
+        </div>
+        <div class="exercise">
+        <!--  <img src="{% static 'images/lunges.jpg' %}" alt="Lunges"> -->
+          <h3>3. Lunges</h3>
+          <p>Complete 3 sets of 10 lunges (5 per leg). Step forward with one leg and lower your body until both knees are bent at 90 degrees, then return to standing.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="exercise">
+         <!-- <img src="{% static 'images/planks.jpg' %}" alt="Planks"> -->
+          <h3>4. Planks</h3>
+          <p>Hold a plank position for 30 seconds, rest for 30 seconds, and repeat for 3 sets. Keep your body in a straight line from head to heels, engaging your core muscles.</p>
+        </div>
+        <div class="exercise">
+        <!--  <img src="{% static 'images/jumping-jacks.jpg' %}" alt="Jumping Jacks"> -->
+          <h3>5. Jumping Jacks</h3>
+          <p>Perform 3 sets of 20 jumping jacks. Start with your feet together and arms at your sides, then jump while raising your arms overhead and spreading your legs.</p>
+        </div>
+        <div class="exercise">
+       <!--   <img src="{% static 'images/bicycle-crunches.jpg' %}" alt="Bicycle Crunches"> -->
+          <h3>6. Bicycle Crunches</h3>
+          <p>Complete 3 sets of 15 bicycle crunches. Lie on your back with your hands behind your head, bring your knees towards your chest, and perform a pedaling motion while touching your opposite elbow to your knee.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Intermediate Exercise Plan Section -->
+<section class="intermediate-exercise-plan-section">
+  <div class="container">
+    <h2>Intermediate Exercise Plan</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="exercise">
+          <h3>1. Jogging</h3>
+          <p>Begin with a 15-minute jog at a moderate pace. Gradually increase your jogging time and intensity as you progress.</p>
+        </div>
+        <div class="exercise">
+          <h3>2. Jump Squats</h3>
+          <p>Complete 3 sets of 12 jump squats. Squat down and explode upwards into a jump, then land softly and immediately go into the next squat.</p>
+        </div>
+        <div class="exercise">
+          <h3>3. Push-Ups with Rotation</h3>
+          <p>Perform 3 sets of 8 push-ups with rotation. After each push-up, rotate your body to one side and raise the corresponding arm towards the ceiling.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="exercise">
+          <h3>4. Walking Lunges</h3>
+          <p>Do 3 sets of 12 walking lunges (6 per leg). Step forward with one leg, lower your body until both knees are bent at 90 degrees, then push off the front foot to return to standing.</p>
+        </div>
+        <div class="exercise">
+          <h3>5. Plank with Leg Lift</h3>
+          <p>Hold a plank position for 30 seconds, then lift one leg off the ground and hold for another 15 seconds. Switch legs and repeat for 3 sets.</p>
+        </div>
+        <div class="exercise">
+          <h3>6. Russian Twists</h3>
+          <p>Complete 3 sets of 15 Russian twists. Sit on the ground, lean back slightly, and rotate your torso to touch the ground on each side with a slight twist.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Expert Exercise Plan Section -->
+<section class="expert-exercise-plan-section">
+  <div class="container">
+    <h2>Expert Exercise Plan</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="exercise">
+          <h3>1. High-Intensity Interval Training (HIIT)</h3>
+          <p>Alternate between 30 seconds of high-intensity exercise (e.g., sprinting, burpees) and 30 seconds of rest for 10 minutes. Gradually increase the duration and intensity of your intervals.</p>
+        </div>
+        <div class="exercise">
+          <h3>2. Plyometric Push-Ups</h3>
+          <p>Perform 4 sets of 8 plyometric push-ups. Lower your body into a push-up, then explosively push off the ground so your hands leave the floor. Land softly and immediately go into the next push-up.</p>
+        </div>
+        <div class="exercise">
+          <h3>3. Pistol Squats</h3>
+          <p>Complete 4 sets of 6 pistol squats (3 per leg). Stand on one leg with the other leg extended in front of you, then lower your body into a squat position while keeping the raised leg off the ground.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="exercise">
+          <h3>4. Single-Leg Deadlifts</h3>
+          <p>Do 4 sets of 8 single-leg deadlifts (4 per leg) with a kettlebell or dumbbell. Hinge at the hips to lower the weight towards the ground while keeping your back straight, then return to standing.</p>
+        </div>
+        <div class="exercise">
+          <h3>5. Hanging Leg Raises</h3>
+          <p>Perform 4 sets of 10 hanging leg raises. Hang from a pull-up bar and raise your legs straight out in front of you until they are parallel to the ground, then lower them back down with control.</p>
+        </div>
+        <div class="exercise">
+          <h3>6. Renegade Rows</h3>
+          <p>Complete 4 sets of 10 renegade rows (5 per arm) with dumbbells. Start in a push-up position with a dumbbell in each hand, then row one weight up towards your hip while stabilizing with the other arm.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

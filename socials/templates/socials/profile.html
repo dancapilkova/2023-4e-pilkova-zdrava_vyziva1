@@ -17,6 +17,7 @@
         </div>
         <h1>{{ profile.user.username }}</h1>
         <p><strong>Added: </strong>{{ profile.user.date_joined|date:'d M Y' }}</p>
+        <p><strong>Date of Birth: </strong>{{ profile.dob }}</p>
         <p><strong>Recipes: </strong>{{ profile.user.creator.count }}</p>
         {% if profile.bio is not none %}
           {{ profile.bio|safe }}
@@ -44,7 +45,7 @@
     </div>
 
     <div id="myModal" class="modal mt-5">
-        <div class="modal-content container">
+        <div class="modal-content container" style=" max-height: 80vh; overflow-y: auto;">
           <span class="close fs-1 pe-2">&times;</span>
           <form method="POST" action="{% url 'edit_profile' request.user.id %}" class="mb-2 p-2" enctype="multipart/form-data">
             <h2 class="text-center fs-4">Edit Profile</h2>
