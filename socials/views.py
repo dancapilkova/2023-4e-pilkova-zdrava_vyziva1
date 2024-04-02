@@ -16,6 +16,7 @@ class Socials(TemplateView):
         return context
 
 class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    template_name = "socials/edit_profile.html"
     form_class = ProfileForm
     model = Profile
 
