@@ -1,1 +1,74 @@
 {% extends 'main.html' %}
+{% load static %}
+
+{% block title %}
+Mental Health Tips
+{% endblock %}
+
+{% block content %}
+  <!-- Introduction Section -->
+  <section class="intro-section">
+    <div class="container">
+      <h2>Welcome to Mental Health Tips</h2>
+      <p>Take care of your mental health with these helpful tips. Remember, your mental health matters.</p>
+    </div>
+  </section>
+
+  <!-- Tips Section -->
+  <section class="tips-section">
+    <div class="container">
+      <h2>Helpful Tips</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="mental-health-tip">
+            <img src="{% static 'images/meditation.jpg' %}" alt="Practice Mindfulness">
+            <h3>Practice Mindfulness</h3>
+            <p>Take time to be present in the moment. Practice mindfulness through meditation, deep breathing, or simply observing your surroundings.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="mental-health-tip">
+            <img src="{% static 'images/support.jpg' %}" alt="Stay Connected">
+            <h3>Stay Connected</h3>
+            <p>Stay connected with friends and loved ones. Social support is important for maintaining good mental health.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="mental-health-tip">
+            <img src="{% static 'images/get-active.jpg' %}" alt="Get Active">
+            <h3>Get Active</h3>
+            <p>Regular physical activity can help reduce symptoms of anxiety and depression. Find an activity you enjoy and make it a part of your routine.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="mental-health-tip">
+            <img src="{% static 'images/sleep.webp' %}" alt="Maintain a Good Sleeping Schedule">
+            <h3>Maintain a Good Sleeping Schedule</h3>
+            <p>Ensure you get enough sleep each night by maintaining a consistent sleep schedule. Avoid caffeine and electronic devices before bedtime to promote better sleep quality.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="mental-health-tip">
+            <img src="{% static 'images/time-limit.avif' %}" alt="Limit Screen Time">
+            <h3>Limit Screen Time</h3>
+            <p>Reduce your screen time, especially before bed. Excessive screen time can disrupt your sleep patterns and contribute to feelings of anxiety and stress.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="mental-health-tip">
+            <img src="{% static 'images/self-care.jpg' %}" alt="Practice Self-Care">
+            <h3>Practice Self-Care</h3>
+            <p>Make time for self-care activities that bring you joy and relaxation. Whether it's reading a book, taking a bath, or going for a walk, prioritize self-care in your daily routine.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="mental-health-tip">
+            <img src="{% static 'images/music.jpg' %}" alt="Listen to Music">
+            <h3>Listen to Music</h3>
+            <p>Music has a profound effect on mood and emotions. Listen to your favorite music to uplift your spirits and reduce stress.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -78,79 +78,181 @@ main {
   width: 50px;
 }
 
+.active {
+  border-bottom: 2px solid var(--green);
+  font-weight: 500;
+}
+
+/* Global Styles */
+
+
+.container {
+  margin-top: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Recipes List Page */
 .card {
-  height: 90%;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 18rem;
+  height: 100%; /* Set a fixed height */
   margin-top: 1rem;
-}
-
-.recipes {
-  text-decoration: none;
-  color: var(--black);
-}
-
-.recipes:hover {
-  cursor: pointer;
-}
-
-.recipe-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-.recipe-container {
-  display: flex;
-  flex-direction: column;
+.card-body {
+  flex-grow: 1; 
+  padding: 1.5rem;/* Allow the body to grow to fill the remaining space */
 }
 
-.ingredients, .instructions, .recipe-detail {
-  width: 100%;
+.card-text {
+  flex-grow: 1; /* Allow the text content to grow */
+  overflow: hidden; /* Hide overflow content */
+  color: #6c757d;
 }
 
-.recipe-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.card:hover {
+  transform: translateY(-5px);
 }
+
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
 
 .recipe-pic {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.recipe-cont {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+/* Recipe Detail Page */
+.recipe-detail {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
 }
 
-a.img-container {
-  position: relative;
+.recipe-detail h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.recipe-detail p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.recipe-img {
   text-align: center;
-  color: var(--white);
-  margin: 2%;
-  overflow: hidden;
-  text-decoration: none;
-  border: 1px solid var(--border);
-  box-shadow: var(--small-box-shadow);
 }
 
-a.img-container:hover {
-  color: var(--orange);
-}
-
-.img-container img {
+.recipe-pic-detail {
   width: 100%;
-  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.centered {
+
+/* Recipe Detail Page */
+
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.ingredients,
+.instructions {
+  width: calc(50% - 10px); /* Adjust width as needed */
+  margin-bottom: 20px; /* Add some space between columns */
+}
+
+.ingredients h2,
+.instructions h2 {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .ingredients,
+  .instructions {
+    width: 100%; /* Make them full width on smaller screens */
+  }
+}
+
+/* Form Pages */
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+
+/* Delete Recipe Page */
+.confirm-delete {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.confirm-delete p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.confirm-delete input[type="submit"] {
   width: 100%;
-  background-color: #000000C9;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #dc3545;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-delete input[type="submit"]:hover {
+  background-color: #c82333;
+}
+
+.form-control {
+  margin-bottom: 1rem;
 }
 
 
@@ -284,6 +386,118 @@ h3 > a {
   color: #666;
 }
 
+/* Exercise Boxes */
+.introduction-section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.introduction-section h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.introduction-section p {
+  font-size: 18px;
+  color: #666;
+}
+.exercise {
+  border: 1px solid #ccc; /* Add border to create box effect */
+  border-radius: 15px; /* Add rounded corners */
+  padding: 60px; /* Add padding for spacing */
+  margin-bottom: 60px; /* Add margin between exercises */
+  background-color: #f9f9f9; /* Add background color */
+  height: 500px; /* Set fixed height for all exercise boxes */
+}
+
+/* Exercise Images */
+.exercise img {
+  width: 100%; /* Ensure image fills the container */
+  height: 60%; /* Adjust height of the image */
+  object-fit: cover; /* Cover the entire container */
+  border-top-left-radius: 15px; /* Add rounded corners to the top */
+  border-top-right-radius: 15px; /* Add rounded corners to the top */
+}
+
+/* Exercise Content */
+.exercise-content {
+  padding: 30px 0; /* Add padding to center content vertically */
+  text-align: center; /* Center align content */
+}
+
+/* Exercise Title */
+.exercise h3 {
+  font-size: 24px; /* Set font size for exercise titles */
+  margin-top: 20px; /* Add margin above titles */
+}
+
+/* Exercise Description */
+.exercise p {
+  font-size: 18px; /* Set font size for exercise descriptions */
+  margin-top: 20px; /* Add margin above descriptions */
+}
+
+.intro-section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.intro-section h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.intro-section p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Tips Section */
+.tips-section {
+  padding: 50px 0; /* Add padding for spacing */
+}
+
+/* Mental Health Tips */
+.mental-health-tip {
+  border: 1px solid #ccc; /* Add border to create box effect */
+  border-radius: 10px; /* Add rounded corners */
+  padding: 20px; /* Add padding for spacing */
+  margin-bottom: 40px; /* Add margin between tips */
+  background-color: #f9f9f9; /* Add background color */
+  height: 470px; /* Set fixed height for all tips */
+  overflow: hidden; /* Hide overflow content */
+}
+
+/* Mental Health Tip Images */
+.mental-health-tip img {
+  max-width: 100%; /* Ensure images don't overflow */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Add rounded corners */
+  object-fit: cover; /* Cover the entire container */
+}
+
+/* Mental Health Tip Content */
+.mental-health-tip-content {
+  margin-top: 20px; /* Add margin above content */
+}
+
+/* Mental Health Tip Title */
+.mental-health-tip h3 {
+  font-size: 24px; /* Set font size for tip titles */
+  margin-top: 10px; /* Add margin above titles */
+}
+
+/* Mental Health Tip Description */
+.mental-health-tip p {
+  font-size: 18px; /* Set font size for tip descriptions */
+  margin-top: 10px; /* Add margin above descriptions */
+}
 @media screen and (min-width:40em) {
   .form {
     width: 50%;
